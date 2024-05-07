@@ -3,7 +3,6 @@ import { Canvas, Button, TextField, SelectField } from 'datocms-react-ui';
 import { useEffect, useState } from 'react';
 import { DragDropContext, Draggable, DropResult, Droppable } from '@hello-pangea/dnd';
 import s from './styles.module.css';
-// import { StrictModeDroppable } from '../components/StrictModeDroppable';
 import { SlugButtonProps } from '../types';
 
 export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConfigScreenCtx }): JSX.Element => {

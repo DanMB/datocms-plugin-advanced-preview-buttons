@@ -1,6 +1,5 @@
 import { RenderFieldExtensionCtx, RenderManualFieldExtensionConfigScreenCtx, connect } from 'datocms-plugin-sdk';
 import { render } from './utils/render';
-// import { PluginConfigScreen } from './entrypoints/PluginConfigScreen';
 import 'datocms-react-ui/styles.css';
 import { FieldConfigScreen } from './entrypoints/FieldConfigScreen';
 import { FieldAddon } from './entrypoints/FieldAddon';
@@ -10,8 +9,8 @@ connect({
 	manualFieldExtensions() {
 		return [
 			{
-				id: 'SlugPreviewButtons',
-				name: 'Slug Preview Buttons',
+				id: 'AdvancedPreviewButtons',
+				name: 'Advanced Preview Buttons',
 				type: 'addon',
 				fieldTypes: ['slug'],
 				configurable: true,
