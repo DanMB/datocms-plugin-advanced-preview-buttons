@@ -1,6 +1,6 @@
 {
 	"name": "datocms-plugin-advanced-preview-buttons",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"author": "DanMB",
 	"homepage": "https://github.com/DanMB/datocms-plugin-advanced-preview-buttons",
 	"description": "Custom preview buttons using advanced reactive values",
@@ -13,7 +13,7 @@
 	"scripts": {
 		"start": "cross-env BROWSER='none' PUBLIC_URL='/' react-scripts start",
 		"build": "cross-env PUBLIC_URL='.' react-scripts build",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "pnpm run build"
 	},
 	"dependencies": {
 		"@hello-pangea/dnd": "^16.6.0",
