@@ -1,3 +1,3 @@
-# [Your plugin name]
+# DatoCMS plugin - Advanced Preview Buttons
 
-[Describe what your plugin does, and how users you can configure it! Screenshots are always welcome!]
+This plugin allows you to add custom preview buttons below a slug field, which can use any fields from the record to generate a custom URL.
