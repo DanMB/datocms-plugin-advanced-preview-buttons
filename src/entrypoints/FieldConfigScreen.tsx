@@ -7,14 +7,16 @@ import s from './styles.module.css';
 import { SlugButtonProps } from '../types';
 
 export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConfigScreenCtx }): JSX.Element => {
-	const [buttonList, setButtonList] = useState<SlugButtonProps[]>([
-		{
-			label: '',
-			value: '',
-			style: 'muted',
-			id: '0',
-		},
-	]);
+	const [buttonList, setButtonList] = useState<SlugButtonProps[]>(
+		(ctx.parameters.buttonList as SlugButtonProps[]) || [
+			{
+				label: '',
+				value: '',
+				style: 'muted',
+				id: '0',
+			},
+		]
+	);
 
 	const handleOnDragEnd = (result: DropResult) => {
 		if (result.reason === 'CANCEL' || !result.destination) return;
