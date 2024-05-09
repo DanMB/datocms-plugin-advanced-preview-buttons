@@ -1,7 +1,6 @@
 import { RenderConfigScreenCtx } from 'datocms-plugin-sdk';
 import { Button, Canvas, TextField } from 'datocms-react-ui';
 import { useState } from 'react';
-import s from './styles.module.css';
 
 export const PluginConfigScreen = ({ ctx }: { ctx: RenderConfigScreenCtx }) => {
 	const [values, setValues] = useState<
@@ -34,12 +33,12 @@ export const PluginConfigScreen = ({ ctx }: { ctx: RenderConfigScreenCtx }) => {
 
 	return (
 		<Canvas ctx={ctx}>
-			<div className={s.container}>
+			<div className='container'>
 				<h3>Global values</h3>
-				<div className={s.list}>
+				<div className='list'>
 					{values.map((value, index) => (
-						<div className={s.item} key={index}>
-							<div className={s.field}>
+						<div className='item' key={index}>
+							<div className='field'>
 								<TextField
 									id={`key-${index}`}
 									name={`key-${index}`}
@@ -53,7 +52,7 @@ export const PluginConfigScreen = ({ ctx }: { ctx: RenderConfigScreenCtx }) => {
 								/>
 							</div>
 
-							<div className={s.field}>
+							<div className='field'>
 								<TextField
 									id={`value-${index}`}
 									name={`value-${index}`}
@@ -69,7 +68,7 @@ export const PluginConfigScreen = ({ ctx }: { ctx: RenderConfigScreenCtx }) => {
 						</div>
 					))}
 				</div>
-				<div className={s.buttonRow}>
+				<div className='buttonRow'>
 					<Button
 						leftIcon={
 							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='1em' height='1em'>

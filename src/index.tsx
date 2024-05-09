@@ -1,6 +1,7 @@
 import { RenderFieldExtensionCtx, RenderManualFieldExtensionConfigScreenCtx, connect } from 'datocms-plugin-sdk';
 import { render } from './utils/render';
 import 'datocms-react-ui/styles.css';
+import './styles.css';
 import { FieldConfigScreen } from './entrypoints/FieldConfigScreen';
 import { FieldAddon } from './entrypoints/FieldAddon';
 import { PluginConfigScreen } from './entrypoints/PluginConfigScreen';

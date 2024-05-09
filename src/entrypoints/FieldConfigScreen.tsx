@@ -2,7 +2,6 @@ import type { RenderManualFieldExtensionConfigScreenCtx } from 'datocms-plugin-s
 import { Canvas, Button, TextField, SelectField } from 'datocms-react-ui';
 import { useEffect, useState } from 'react';
 import { DragDropContext, Draggable, DropResult, Droppable } from '@hello-pangea/dnd';
-import s from './styles.module.css';
 import { SlugButtonProps } from '../types';
 
 export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConfigScreenCtx }): JSX.Element => {
@@ -47,27 +46,27 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 
 	return (
 		<Canvas ctx={ctx}>
-			<div className={s.container}>
+			<div className='container'>
 				<DragDropContext onDragEnd={handleOnDragEnd}>
 					<Droppable droppableId='buttonList'>
 						{provided => (
-							<div className={s.list} {...provided.droppableProps} ref={provided.innerRef}>
+							<div className='list' {...provided.droppableProps} ref={provided.innerRef}>
 								{buttonList.map((button, index) => {
 									return (
 										<Draggable key={button.id} draggableId={button.id} index={index}>
 											{provided => (
 												<div
-													className={s.item}
+													className='item'
 													{...provided.draggableProps}
 													{...provided.dragHandleProps}
 													ref={provided.innerRef}
 												>
-													<div className={s.handle}>
+													<div className='handle'>
 														<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' width='1em' height='1em'>
 															<path d='M0 88C0 74.7 10.7 64 24 64H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24C10.7 112 0 101.3 0 88zM0 248c0-13.3 10.7-24 24-24H424c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24zM448 408c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24H424c13.3 0 24 10.7 24 24z'></path>
 														</svg>
 													</div>
-													<div className={`${s.field} ${s.label}`}>
+													<div className='field label'>
 														<TextField
 															required={true}
 															id={`${button.id}_label`}
@@ -81,7 +80,7 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 															value={button.label}
 														/>
 													</div>
-													<div className={`${s.field} ${s.value}`}>
+													<div className='field value'>
 														<TextField
 															required={true}
 															id={`${button.id}_value`}
@@ -95,7 +94,7 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 															value={button.value}
 														/>
 													</div>
-													<div className={`${s.field} ${s.style}`}>
+													<div className='field style'>
 														<SelectField
 															required={true}
 															id={`${button.id}_style`}
@@ -119,7 +118,7 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 														/>
 													</div>
 													<Button
-														className={s.delete}
+														className='delete'
 														buttonType='muted'
 														buttonSize='xxs'
 														leftIcon={
