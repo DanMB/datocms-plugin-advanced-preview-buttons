@@ -1,6 +1,6 @@
 {
 	"name": "datocms-plugin-advanced-preview-buttons",
-	"version": "0.2.3",
+	"version": "0.2.4",
 	"author": "DanMB",
 	"homepage": "https://github.com/DanMB/datocms-plugin-advanced-preview-buttons",
 	"description": "Custom preview buttons using advanced reactive values",

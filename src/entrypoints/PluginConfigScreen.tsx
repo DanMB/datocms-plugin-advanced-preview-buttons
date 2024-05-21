@@ -49,6 +49,9 @@ export const PluginConfigScreen = ({ ctx }: { ctx: RenderConfigScreenCtx }) => {
 										setValues(items);
 									}}
 									value={value.key}
+									textInputProps={{
+										autoComplete: 'off',
+									}}
 								/>
 							</div>
 
@@ -63,6 +66,9 @@ export const PluginConfigScreen = ({ ctx }: { ctx: RenderConfigScreenCtx }) => {
 										setValues(items);
 									}}
 									value={value.value}
+									textInputProps={{
+										autoComplete: 'off',
+									}}
 								/>
 							</div>
 						</div>

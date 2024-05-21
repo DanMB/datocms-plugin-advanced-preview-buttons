@@ -10,7 +10,7 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 			{
 				label: '',
 				value: '',
-				style: 'muted',
+				style: 'primary',
 				id: '0',
 			},
 		]
@@ -78,6 +78,9 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 															}}
 															label='Label'
 															value={button.label}
+															textInputProps={{
+																autoComplete: 'off',
+															}}
 														/>
 													</div>
 													<div className='field value'>
@@ -92,6 +95,9 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 															}}
 															label='Value'
 															value={button.value}
+															textInputProps={{
+																autoComplete: 'off',
+															}}
 														/>
 													</div>
 													<div className='field style'>
@@ -102,8 +108,8 @@ export const FieldConfigScreen = ({ ctx }: { ctx: RenderManualFieldExtensionConf
 															label='Style'
 															selectInputProps={{
 																options: [
-																	{ label: 'muted', value: 'muted' },
 																	{ label: 'primary', value: 'primary' },
+																	{ label: 'muted', value: 'muted' },
 																	{ label: 'negative', value: 'negative' },
 																],
 																isMulti: false,
